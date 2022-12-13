@@ -28,7 +28,7 @@ Setting up client directory
 Setting up server directory
 
 ```bash
-  cd server
+  cd ../server
 ```
 
 ```bash
