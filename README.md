@@ -1,5 +1,5 @@
 
-# ThePclub
+# The Programming Club
 The Official Repository of the Programming Club of Ahmedabad University
 
 
