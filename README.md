@@ -16,6 +16,10 @@ Clone the project
   git clone https://github.com/Programming-Club-Ahmedabad-University/TheProgrammingClub.git
 ```
 
+## To Start with
+- Add your Github IDs in [CONTRIBUTORS.md](./CONTRIBUTORS.MD)
+  - Though it won't be counted in any of the prizes, but it's for learning purpose.
+
 ### For setting up the server refer to [server/README.md](server/README.md)
 
 ### For setting up the client refer to [client/README.md](client/README.md)
