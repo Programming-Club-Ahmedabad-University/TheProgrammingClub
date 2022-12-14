@@ -16,34 +16,6 @@ Clone the project
   git clone https://github.com/Programming-Club-Ahmedabad-University/TheProgrammingClub.git
 ```
 
-Setting up client directory
+### For setting up the server refer to [server/README.md](server/README.md)
 
-```bash
-  cd client
-```
-```bash
-  npm i
-```
-
-Setting up server directory
-
-```bash
-  cd server
-```
-
-```bash
-  npm i
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
-
-Start the client
-
-```bash
-  cd ../client
-  npm start
-```
+### For setting up the client refer to [client/README.md](client/README.md)
