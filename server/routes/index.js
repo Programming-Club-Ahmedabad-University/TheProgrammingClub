@@ -1,12 +1,6 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
 
-
-/**
- * -------------- GET ROUTES ----------------
- */
-router.get("/", (req, res, next) => {
-    res.json({ message: "Hello World!" });
-});
-  
+router.use('/auth', require('./signin.route'));
 
 module.exports = router;

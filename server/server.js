@@ -1,27 +1,28 @@
-const express = require('express');
+require("dotenv").config();
+const PORT = process.env.PORT || 8000;
 
+// connecting with database
+require("./config/database").connect();
 
-const app = express();
-const port = 4000;
-const routes = require('./routes/index.js');
+const express = require('express')
+const app = express()
 
-app.use(express.json());
+app.use(express.json())
 
 app.use((req, res, next) => {
-    console.log(`${req.method} request for '${req.url}' - ${JSON.stringify(req.body)}`);
-    next();
-});
+    console.log(`${req.method} request for '${req.url}' - ${JSON.stringify(req.body)}`)
+    next()
+})
 
 /**
  * -------------- ROUTES ----------------
  */
 
 // Imports all of the routes from ./routes/index.js
-app.use(routes);
+app.use('/api', require('./routes'))
 
-
-
-
-
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
+// to check for sample backend request
+app.listen(PORT || 5500, (err) => {
+    if (err) console.log(err);
+    else console.log(`Server running at PORT ${PORT}`);
+});
