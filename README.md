@@ -27,7 +27,7 @@ Clone the project
 <!-- CONTRIBUTING -->
 ## Rules and Guidelines
 
-1. There should be a minimum of 2 pull requests to be eligible for the badges. Pull requests or contributions to the project will be considered and credited towards the website of the Programming Club.
+1. There should be a minimum of 2 pull requests to be eligible for the badges and both of these pull requests must at least be of ‘medium’ priority.  Other pull requests or contributions to the project will be considered and credited towards the website of the Programming Club.
 2. There are 4 domains on which you can work. You can choose any domain based on your knowledge and interests; there are no restrictions on selections.
 3. To support the participants in the journey, we have mentors with expertise in development. Regular discord meetings would be held to address any doubts related to the project. You are also free to contact any mentor in case of queries.
 4. As your consideration will be credited towards the project, we expect your code to be clean, formatted, standardized, and industry-level.
