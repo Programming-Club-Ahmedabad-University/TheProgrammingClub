@@ -3,12 +3,11 @@ import { isEmail } from 'validator';
 
 const userSchema = new mongoose.Schema({
   userName: String,
-  email: {
+  email:{
     type: String,
     lowercase: true,
     unique: true,
-    required: 'Email address is required',
-    validate: [ isEmail, 'invalid email']
+    validate: [ isEmail, 'invalid email'] 
   },
   passWord: String,
   googleId: String,
