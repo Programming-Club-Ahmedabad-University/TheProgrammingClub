@@ -1,3 +1,4 @@
+const cors = require("cors");
 require("dotenv").config();
 const PORT = process.env.PORT || 8000;
 
@@ -7,6 +8,14 @@ require("./config/database").connect();
 const express = require('express')
 const app = express()
 
+const corsOptions = {
+    origin:'*', 
+    credentials:true,
+    optionSuccessStatus:200,
+}
+
+// Middlewares
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use((req, res, next) => {
