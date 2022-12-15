@@ -17,8 +17,9 @@ Clone the project
 ```
 
 ## To Start with
-- Add your Github IDs in [CONTRIBUTORS.md](./CONTRIBUTORS.MD)
-  - Though it won't be counted in any of the prizes, but it's for learning purpose.
+- Add your Github IDs in [CONTRIBUTORS.md](./CONTRIBUTORS.MD). (Please bear in mind that these won't be counted as major pull requests)
+
+### For site designs refer to [figma designs](https://www.figma.com/file/nJJwlLEszyxVQdzJJzLFiw/Pclub-Website?node-id=0%3A1&t=V0VxHWTHN6mCwIaW-1)
 
 ### For setting up the server refer to [server/README.md](server/README.md)
 
