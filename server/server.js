@@ -16,10 +16,11 @@ app.use((req, res, next) => {
 
 /**
  * -------------- ROUTES ----------------
- */
+*/
 
 // Imports all of the routes from ./routes/index.js
-app.use('/api', require('./routes'))
+app.use('/', require('./routes/index'));
+app.use('/api', require('./routes'));
 
 // to check for sample backend request
 app.listen(PORT || 5500, (err) => {
