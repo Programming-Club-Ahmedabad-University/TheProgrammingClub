@@ -22,8 +22,11 @@ const signin = async (req, res, next) => {
     // Our login logic starts here
     try {
         // Get user input
-        const { email, password } = req.body;
+        const password = req.body.password;
+        var email = req.body.email;
 
+        //For consistency the email was turned into lowercase during signup
+        email = email.toLowerCase();
         // Validate user input
         if (!(email && password)) {
             res.status(400).send("All input is required");
