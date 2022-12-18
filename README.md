@@ -4,6 +4,9 @@ The Official Repository of the Programming Club of Ahmedabad University
 
 
 ## Contributing
+<a href="https://github.com/MihirKotecha/TheProgrammingClub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MihirKotecha/TheProgrammingClub"/>
+</a>
 
 Contributions are always welcome!
 
