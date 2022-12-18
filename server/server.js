@@ -6,8 +6,18 @@ require("./config/database").connect();
 
 const express = require('express')
 const app = express()
+const cors = require("cors");
 
+// Adding origin as * to be accessible by any port
+const corsOptions = {
+    origin: '*', 
+    credentials: true,
+    optionSuccessStatus: 200
+}
+
+// Middlewares
 app.use(express.json())
+app.use(cors(corsOptions))
 
 app.use((req, res, next) => {
     console.log(`${req.method} request for '${req.url}' - ${JSON.stringify(req.body)}`)
