@@ -23,7 +23,7 @@ const signin = async (req, res, next) => {
     try {
         // Get user input
         const password = req.body.password;
-        var email = req.body.email;
+        let email = req.body.email;
 
         //For consistency the email was turned into lowercase during signup
         email = email.toLowerCase();
@@ -67,10 +67,16 @@ const signup = async (req, res, next) => {
     // Create signin function
     try {
 
-        const { email, password } = req.body;
+        // Get user input
+        const password = req.body.password;
+        let email = req.body.email;
+
         if (!(email && password)) {
             res.status(400).send("All input is required");
         }
+
+        //For consistency the email was turned into lowercase during signup
+        email = email.toLowerCase();
 
         // check if user already exist
         // Validate if user exist in our database
