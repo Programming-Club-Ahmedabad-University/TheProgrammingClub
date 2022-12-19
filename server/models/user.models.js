@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+import {isEmail} from "validator"
 
 const userSchema = new mongoose.Schema({
   name: String,
