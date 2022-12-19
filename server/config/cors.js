@@ -2,7 +2,7 @@ const cors = require('cors');
 
 
 var corsOptions = {
-    origin: 'http://localhost:8000',
+    origin: '*',
     optionsSuccessStatus: 204 
   }
 
