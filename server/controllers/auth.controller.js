@@ -12,6 +12,9 @@ const fs = require('fs');
 pathToKey = require('path').join(__dirname, '..', './config/id_rsa_priv.pem');
 const PRIV_KEY = fs.readFileSync(pathToKey, 'utf8'); //private key is used for signing the token
 
+// token expiration time
+const tokenExpirationTime = "1m";
+
 /*
     This function is used to authenticate the user when he/she tries to login
     A post request is made to the server with the user's email and password
@@ -38,11 +41,10 @@ const signin = async (req, res, next) => {
         if (user && (await bcrypt.compare(password, user.password))) {
             const payload = {
                 user: user,
-                iat: Date.now()
             }
             // Create token
             const token = "Bearer " + jwt.sign(
-                payload, PRIV_KEY, { expiresIn: "1d", algorithm: 'RS256' }
+                payload, PRIV_KEY, { expiresIn: tokenExpirationTime, algorithm: 'RS256' }
             );
             // send user
             res.status(200).json({ token, user });
@@ -97,11 +99,10 @@ const signup = async (req, res, next) => {
 
         const payload = {
             user: user,
-            iat: Date.now()
         }
         // Create token
         const token = "Bearer " + jwt.sign(
-            payload, PRIV_KEY, { expiresIn: "1d", algorithm: 'RS256' }
+            payload, PRIV_KEY, { expiresIn: tokenExpirationTime, algorithm: 'RS256' }
         );
         // return new user
         res.status(201).json({ token, user });
