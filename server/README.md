@@ -1,4 +1,5 @@
 # ThePclub
+
 The Official Repository of the Programming Club of
 Ahmedabad University
 
@@ -19,6 +20,3 @@ Start the server
 ```bash
   npm run dev
 ```
-
-
-
