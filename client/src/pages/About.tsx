@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from 'react';
 
-export interface IAboutProps {}
-
-export default class About extends React.PureComponent<IAboutProps> {
-  public render() {
-    return <div></div>;
-  }
+const About: React.FC = () => {
+    return (
+        <div>About Page</div>
+    );
 }
+
+export default About; 
