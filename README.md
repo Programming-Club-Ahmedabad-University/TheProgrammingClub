@@ -4,11 +4,6 @@ The Official Repository of the Programming Club of Ahmedabad University
 
 
 ## Contributing
-### Thanks to all these amazing people for contributing✨✨
-
-<img src="CONTRIBUTORS.svg"/>
-
-
 Contributions are always welcome!
 
 
@@ -42,4 +37,10 @@ Clone the project
 8. In any case, the University’s Code of Conduct must be respected. The violation of the University’s code of conduct would directly lead to the participant's disqualification.
 9. Please maintain the sanctity of the event. Give importance to learning new concepts and getting a value addition to your skill set. Let's foster an
 environment where we can learn from each other.
+
+## CONTRIBUTORS
+### Thanks to all these amazing people for contributing✨✨
+
+<img src="CONTRIBUTORS.svg"/>
+
 
