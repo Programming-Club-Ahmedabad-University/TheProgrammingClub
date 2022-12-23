@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from 'react';
 
-export interface ILoginProps {}
-
-export default class Login extends React.PureComponent<ILoginProps> {
-  public render() {
-    return <div></div>;
-  }
+const Login: React.FC = () => {
+    return (
+        <div>Login Page</div>
+    );
 }
+
+export default Login; 
