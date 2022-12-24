@@ -5,7 +5,7 @@ import About from './pages/About';
 import Events from './pages/Events';
 import Community from './pages/Community';
 import Login from './pages/Login';
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 
 import Layout from './components/Layout'; 
 
