@@ -1,9 +1,11 @@
 const jwt = require("jsonwebtoken");
 
 // reading the content of the private key
-const fs = require("fs");
-pathToKey = require("path").join(__dirname, "..", "./config/id_rsa_priv.pem");
-const PRIV_KEY = fs.readFileSync(pathToKey, "utf8"); //private key is used for signing the token
+// const fs = require("fs");
+// pathToKey = require("path").join(__dirname, "..", "./config/id_rsa_priv.pem");
+// const PRIV_KEY = fs.readFileSync(pathToKey, "utf8"); //private key is used for signing the token
+require('dotenv').config()
+const PRIV_KEY = process.env.PRIV_KEY;
 
 const tokenCheck = (req, res, next) => {
     // Get the token from the header if present
