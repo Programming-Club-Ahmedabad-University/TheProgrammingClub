@@ -10,13 +10,15 @@ export default function About() {
 			</div>
 
 			<div className="grid" id="about-content">
-				<div id="picture-container">Picture</div>
+				<div id="picture-container" className="border-none">
+					Picture
+				</div>
 				<div id="middle-border">
 					<div id="middle-border-top"></div>
 					<div id="middle-border-middle"></div>
 					<div id="middle-border-bottom"></div>
 				</div>
-				<div id="text-container">
+				<div id="text-container" className="p-4">
 					<h1 className="text-xl p-1">About</h1>
 					<div className="p-2">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
