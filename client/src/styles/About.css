@@ -2,9 +2,13 @@
 	display: grid;
 	grid-template-rows: 5px 1fr 5px;
 	color: white;
+	/* background-color: white; */
 	width: 100%;
 	padding: 0 96px;
 	margin: 1em 0;
+}
+#about > div {
+	background-color: rgba(255, 255, 255, 0.04);
 }
 
 #middle-border {
@@ -95,4 +99,9 @@
 }
 #bottom-border > div {
 	background-color: rgba(64, 233, 241, 0.9);
+}
+#text-container-content {
+	font-family: "Pro Display", sans-serif;
+	text-transform: capitalize;
+	color: rgba(255, 255, 255, 0.8);
 }

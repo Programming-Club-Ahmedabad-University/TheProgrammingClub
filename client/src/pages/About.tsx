@@ -18,9 +18,9 @@ export default function About() {
 					<div id="middle-border-middle"></div>
 					<div id="middle-border-bottom"></div>
 				</div>
-				<div id="text-container" className="p-4">
-					<h1 className="text-xl p-1">About</h1>
-					<div className="p-2">
+				<div className="p-12">
+					<h1 className="text-2xl p-1">ABOUT</h1>
+					<div className="p-2" id="text-container-content">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam, quis nostrud
