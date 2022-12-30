@@ -6,7 +6,7 @@ import Footer from "./Footer"
 
 const Layout: React.FC = () => {
 	return (
-		<div className="App mt-28">
+		<div className="App mt-28 w-full">
 			<Navbar />
 			<Outlet />
 			<Footer />
