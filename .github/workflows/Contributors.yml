@@ -1,22 +1,37 @@
 name: Contributors
 on:
-  schedule:
-    - cron: '*/1 * * * *' 
+  pull_request:
+    types:
+      - opened
   push:
     branches:
-      - master
+    - master
 jobs:
   contributors:
     runs-on: ubuntu-latest
     steps:
-      - uses: wow-actions/contributors-list@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          userNameHeight: 19
-          itemTemplate: >
-            <g transform="translate({{ x }}, {{ y }})">
-              <a xlink:href="{{{ url }}}" class="contributor-link" target="_blank" rel="nofollow sponsored" title="{{{ name }}}" id="{{{ name }}}">
-                <image width="{{ width }}" height="{{ height }}" xlink:href="{{{ avatar }}}" />
-                <text x="32" y="74" text-anchor="middle" alignment-baseline="middle" font-size="12">{{{ name }}}</text>
-              </a>
-            </g>
+      - name: Check for new contributors
+        id: new_contributor_check
+        run: |
+          contributors=$(git log --pretty=format:"%an" ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | sort -u)
+          if [ -n "$contributors" ]; then
+            echo "New contributors detected: $contributors"
+            echo "::set-output name=new_contributor::true"
+          else
+            echo "No new contributors detected."
+            echo "::set-output name=new_contributor::false"
+          fi
+      - name: Run only if new contributor
+        if: steps.new_contributor_check.outputs.new_contributor == 'true'
+        run: |
+          - uses: wow-actions/contributors-list@v1
+            with:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              userNameHeight: 19
+              itemTemplate: >
+                <g transform="translate({{ x }}, {{ y }})">
+                  <a xlink:href="{{{ url }}}" class="contributor-link" target="_blank" rel="nofollow sponsored" title="{{{ name }}}" id="{{{ name }}}">
+                    <image width="{{ width }}" height="{{ height }}" xlink:href="{{{ avatar }}}" />
+                    <text x="32" y="74" text-anchor="middle" alignment-baseline="middle" font-size="12">{{{ name }}}</text>
+                  </a>
+                </g>
